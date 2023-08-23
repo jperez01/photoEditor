@@ -14,7 +14,9 @@ find_package(Qt6 COMPONENTS
         Widgets
         REQUIRED)
 
-add_executable(photoEditor src/main.cpp)
+add_executable(photoEditor src/main.cpp
+        src/core/image.cpp
+        src/core/image.h)
 target_link_libraries(photoEditor
         Qt::Core
         Qt::Gui
