@@ -42,6 +42,7 @@ public:
 
     void paintEvent(QPaintEvent* event) override;
 
+
 private:
     QImage m_image;
     char* m_data;
