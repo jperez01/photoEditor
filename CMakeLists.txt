@@ -16,7 +16,21 @@ find_package(Qt6 COMPONENTS
 
 add_executable(photoEditor src/main.cpp
         src/core/image.cpp
-        src/core/image.h)
+        src/core/image.h
+        src/ui/mainwindow.h src/ui/mainwindow.cpp src/ui/mainwindow.ui
+        src/ui/projectwizard.h src/ui/projectwizard.cpp src/ui/projectwizard.ui
+        src/ui/workspace.h src/ui/workspace.cpp src/ui/workspace.ui
+        src/core/layerManager.cpp
+        src/core/layerManager.h
+        src/core/toolManager.cpp
+        src/core/toolManager.h
+        src/tools/pencil.cpp
+        src/tools/pencil.h
+        src/core/tool.cpp
+        src/core/tool.h
+)
+target_include_directories(photoEditor PUBLIC "./src")
+
 target_link_libraries(photoEditor
         Qt::Core
         Qt::Gui

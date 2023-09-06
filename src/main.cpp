@@ -1,17 +1,15 @@
 #include <QApplication>
-#include <QPushButton>
-#include <QLabel>
 
 #include "core/image.h"
+#include "ui/mainwindow.h"
 
 int main(int argc, char *argv[]) {
-    QApplication a(argc, argv);
-    QPushButton button("Hello world!", nullptr);
+    QApplication app(argc, argv);
+    app.setApplicationName("Photo Editor");
+    app.setOrganizationName("Juan Enterprises");
 
-    Image myImage(500, 500);
-    myImage.setFixedSize(500, 500);
+    MainWindow window;
+    window.show();
 
-    myImage.show();
-
-    return QApplication::exec();
+    return app.exec();
 }
